@@ -24,11 +24,10 @@ Right now, I am actively building complex systems and aiming to be fully interns
 **DevOps & Tools:** ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) 
 
 ---
-
 ## 📊 GitHub Analytics
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=pushpam2404&theme=dark&hide_border=false&include_all_commits=true&count_private=true" width="48%">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pushpam2404&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact" width="48%">
+  <img src="https://github-readme-stats.vercel.app/api?username=pushpam2404&theme=dark&hide_border=false&show_icons=true" width="48%" alt="GitHub Stats">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pushpam2404&theme=dark&hide_border=false&layout=compact" width="48%" alt="Top Languages">
 </div>
 <br/>
 <div align="center">
