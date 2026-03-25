@@ -29,24 +29,11 @@ Right now, I am actively building complex systems and aiming to be fully interns
   <img src="https://github-readme-stats.vercel.app/api?username=pushpam2404&theme=dark&hide_border=false&show_icons=true" width="48%" alt="GitHub Stats">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pushpam2404&theme=dark&hide_border=false&layout=compact" width="48%" alt="Top Languages">
 </div>
-<br/>
-<div align="center">
-  <img src="https://nirzak-streak-stats.vercel.app/?user=pushpam2404&theme=dark&hide_border=false">
-</div>
-
-## 🏆 Open Source & Contributions
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=pushpam2404&theme=radical&no-frame=false&no-bg=false&margin-w=4">
-</div>
-<br/>
-<div align="center">
-  <img src="https://github-contributor-stats.vercel.app/api?username=pushpam2404&limit=5&theme=dark&combine_all_yearly_contributions=true">
-</div>
 
 ---
 
 ## 🌐 Let's Connect
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/PushpamRajSatyarthi) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:prsatyarthi2404@gmail.com) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/ft.puxhpam_24)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/PushpamRajSatyarthi) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:prsatyarthi2404@gmail.com) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/ft.puxhpam_24)(https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:prsatyarthi2404@gmail.com) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/ft.puxhpam_24)
 
 <div align="center">
   <a href="https://visitcount.itsvg.in"><img src="https://visitcount.itsvg.in/api?id=pushpam2404&icon=2&color=1"></a>
