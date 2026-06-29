@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Pushpam Raj Satyarthi 👋</h1>
 
 ## ⚡ About Me
-I'm a 2nd-year Computer Science undergrad at GITAM University, Visakhapatnam (CGPA 9.17), focused on **Data Engineering** and **Backend Systems**. I prefer building robust, scalable pipelines and data infrastructure over abstract, math-heavy ML theory.
+I'm a 3rd-year Computer Science undergrad at GITAM University, Visakhapatnam (CGPA 9.17), focused on **Data Engineering** and **Backend Systems**. I prefer building robust, scalable pipelines and data infrastructure over abstract, math-heavy ML theory.
 
 I recently completed a software engineering internship at **Motherson Technology Services Limited**, where I independently built the Chat History feature for *LegalLens* — an AI-powered legal research platform. That meant shipping a 316-line FastAPI module from scratch, 9 CRUD endpoints, and a SQLite + Azure Blob Storage hybrid persistence layer, across an 8,000+ line full-stack codebase in React/TypeScript + Python.
 
