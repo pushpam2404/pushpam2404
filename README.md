@@ -172,7 +172,7 @@ As Domain Lead, I build the repositories our community learns to contribute on �
 </div>
 
 <div align="center">
-  <img src="https://ghchart.rshah.org/58A6FF/pushpam2404" width="92%" alt="Contribution Graph">
+  <img src="./contributions.svg" width="96%" alt="Contribution graph — dark for a quiet day, deepening pink as contributions rise">
 </div>
 
 <!--
@@ -212,5 +212,3 @@ As Domain Lead, I build the repositories our community learns to contribute on �
 - 📜 **IBM Data Engineering Professional Certificate** — 16-course specialisation
 
 ---
-
-<p align="center"><sub>Built with <a href="https://gprm.itsvg.in">GPRM</a> · Let's build something that doesn't fall over in production.</sub></p>

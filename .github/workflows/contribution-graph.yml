@@ -1,0 +1,55 @@
+# Regenerate contributions.svg so the graph on the profile stays current.
+#
+# The graph is committed to this repository rather than loaded from a
+# third-party image host, because every such host either hardcodes a light grey
+# for empty days or has run out of free quota. The trade-off is that it has to
+# be rebuilt on a schedule — that is what this workflow does.
+name: Contribution graph
+
+on:
+  schedule:
+    # 01:30 UTC daily, which is 07:00 IST. Cron on GitHub Actions is best-effort
+    # and can be delayed under load; that is fine for a once-a-day refresh.
+    - cron: "30 1 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build_contribution_graph.py"
+      - ".github/workflows/contribution-graph.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contribution-graph
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Rebuild the graph
+        env:
+          # The default GITHUB_TOKEN can read the contributions calendar for the
+          # user who owns this repository, which is all this needs.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/build_contribution_graph.py "${{ github.repository_owner }}" contributions.svg
+
+      - name: Commit only if something changed
+        run: |
+          if git diff --quiet -- contributions.svg; then
+            echo "No change in the last day — nothing to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add contributions.svg
+          git commit -m "chore: refresh contribution graph [skip ci]"
+          git push
