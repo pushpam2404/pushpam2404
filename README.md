@@ -1,8 +1,12 @@
-<h1 align="center">Hi, I'm Pushpam Raj Satyarthi 👋</h1>
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,45:1F6FEB,100:58A6FF&height=230&section=header&text=Pushpam%20Raj%20Satyarthi&fontSize=46&fontColor=ffffff&fontAlignY=36&animation=fadeIn&desc=Data%20Engineering%20%C2%B7%20Backend%20Systems%20%C2%B7%20Applied%20ML&descSize=18&descAlignY=57" width="100%" alt="Pushpam Raj Satyarthi — Data Engineering, Backend Systems, Applied ML" />
+</p>
+
+<h1 align="center">Hi, I'm Pushpam 👋</h1>
 
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=58A6FF&center=true&vCenter=true&width=650&lines=Data+Engineering+%26+Backend+Systems;FastAPI+%C2%B7+PostgreSQL+%C2%B7+Airflow+%C2%B7+Spark+%C2%B7+Kafka;CSE+%40+GITAM+University+%E2%80%94+CGPA+9.17;I+build+pipelines+that+don't+fail+silently" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=58A6FF&center=true&vCenter=true&width=650&lines=Data+Engineering+%26+Backend+Systems;SWE+Intern+%40+Motherson+%E2%80%94+AIML+Team;President%2C+IEEE-CS+GITAM+Vizag;FastAPI+%C2%B7+PostgreSQL+%C2%B7+Airflow+%C2%B7+Spark+%C2%B7+Kafka;CSE+%40+GITAM+University+%E2%80%94+CGPA+9.17;I+build+pipelines+that+don't+fail+silently" alt="Typing SVG" />
   </a>
 </p>
 
@@ -11,6 +15,14 @@
   <a href="mailto:prsatyarthi2404@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
   <a href="https://instagram.com/ft.puxhpam_24"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram"></a>
   <img src="https://img.shields.io/badge/Visakhapatnam,%20India-1F883D?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/CGPA-9.17-58A6FF?style=flat-square&labelColor=0D1117" alt="CGPA 9.17">
+  <img src="https://img.shields.io/badge/IBM-Data%20Engineering%20Certified-58A6FF?style=flat-square&logo=ibm&logoColor=white&labelColor=0D1117" alt="IBM Data Engineering Professional Certificate">
+  <img src="https://img.shields.io/badge/IEEE--CS%20GITAM-President-58A6FF?style=flat-square&logo=ieee&logoColor=white&labelColor=0D1117" alt="President, IEEE-CS GITAM Vizag">
+  <img src="https://img.shields.io/badge/SIH-2025%20%C2%B7%202026%20Qualifier-58A6FF?style=flat-square&labelColor=0D1117" alt="Smart India Hackathon 2025 and 2026 internal round qualifier">
+  <img src="https://img.shields.io/badge/Open%20to-Data%20Eng%20%C2%B7%20Backend%20roles-2EA043?style=flat-square&labelColor=0D1117" alt="Open to Data Engineering and Backend roles">
 </p>
 
 ---
@@ -22,6 +34,8 @@ CSE undergraduate at **GITAM University, Visakhapatnam** (CGPA **9.17**), focuse
 🏢 &nbsp;Software Engineering Intern at **Motherson Technology Services Limited** (AIML Team), where I independently designed and shipped the chat-history persistence layer for **LegalLens**, a live AI legal-research platform — a 316-line FastAPI module, 9 CRUD endpoints, and a hybrid SQLite + Azure Blob Storage architecture, across a full-stack React/TypeScript + Python codebase.
 
 🎓 &nbsp;**IBM Data Engineering Professional Certificate** — 16 courses covering Airflow, Kafka, Spark, Hadoop, data warehousing, NoSQL and BI.
+
+🧭 &nbsp;**President, IEEE-CS GITAM Vizag**.
 
 🚩 &nbsp;**Domain Lead, Open Source & DevX** — GitHub Community, GITAM Vizag.
 
@@ -68,6 +82,7 @@ CSE undergraduate at **GITAM University, Visakhapatnam** (CGPA **9.17**), focuse
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
 
 **Machine Learning**
@@ -75,19 +90,29 @@ CSE undergraduate at **GITAM University, Visakhapatnam** (CGPA **9.17**), focuse
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![XGBoost](https://img.shields.io/badge/XGBoost-337AB7?style=for-the-badge&logo=xgboost&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+![SentenceTransformers](https://img.shields.io/badge/Sentence%20Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![NetworkX](https://img.shields.io/badge/NetworkX-2C5BB4?style=for-the-badge&logo=python&logoColor=white)
 ![SHAP](https://img.shields.io/badge/SHAP-8A2BE2?style=for-the-badge&logo=python&logoColor=white)
+
+**BI & Analytics**
+
+![IBM Cognos](https://img.shields.io/badge/IBM%20Cognos-052FAD?style=for-the-badge&logo=ibm&logoColor=white)
+![Looker](https://img.shields.io/badge/Looker-4285F4?style=for-the-badge&logo=looker&logoColor=white)
 
 **Cloud, Tools & Systems**
 
 ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![Azure Blob Storage](https://img.shields.io/badge/Azure%20Blob%20Storage-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![Bash](https://img.shields.io/badge/Shell%20Scripting-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
 ![GNU Make](https://img.shields.io/badge/GNU%20Make-A42E2B?style=for-the-badge&logo=make&logoColor=white)
 ![GDB](https://img.shields.io/badge/GDB-A42E2B?style=for-the-badge&logo=gnu&logoColor=white)
 ![Valgrind](https://img.shields.io/badge/Valgrind-652C90?style=for-the-badge&logo=c&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS%20Code-0078D4?style=for-the-badge&logo=visualstudiocode&logoColor=white)
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
 ---
@@ -178,15 +203,14 @@ As Domain Lead, I build the repositories our community learns to contribute on �
   <img src="./contributions.svg" width="96%" alt="Contribution graph — dark for a quiet day, deepening pink as contributions rise">
 </div>
 
-<!--
-  The classic github-readme-stats cards are intentionally left out for now:
-  the shared instance at github-readme-stats.vercel.app is returning 503 and
-  renders a "Something went wrong!" card rather than your stats. When it is
-  back up, delete this comment and paste the two lines below back in.
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=pushpam2404&theme=tokyonight&hide_border=false&include_all_commits=true&show_icons=true&rank_icon=github" height="180" alt="GitHub Stats">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pushpam2404&theme=tokyonight&hide_border=false&layout=compact&langs_count=8" height="180" alt="Top Languages">
+</div>
 
-  <img src="https://github-readme-stats.vercel.app/api?username=pushpam2404&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=true&show_icons=true" width="48%" alt="GitHub Stats">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pushpam2404&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=true&layout=compact" width="48%" alt="Top Languages">
--->
+<div align="center">
+  <img src="https://raw.githubusercontent.com/pushpam2404/pushpam2404/output/github-contribution-grid-snake-dark.svg" width="96%" alt="Snake eating my contribution graph">
+</div>
 
 ---
 
@@ -208,6 +232,7 @@ As Domain Lead, I build the repositories our community learns to contribute on �
 
 ## 🏅 Achievements
 
+- 🧭 **President** — IEEE-CS GITAM Vizag
 - 🚩 **Domain Lead, Open Source & DevX** — GitHub Community, GITAM Vizag
 - 🥇 **Smart India Hackathon 2026** — Internal Round Qualifier, led the Fake Account & Threat Detection Engine (SIH-1775) for ITBP / Ministry of Home Affairs
 - 🥈 **Smart India Hackathon 2025** — Internal Round Qualifier, led TripSync from zero in a 24-hour constraint
@@ -215,3 +240,7 @@ As Domain Lead, I build the repositories our community learns to contribute on �
 - 📜 **IBM Data Engineering Professional Certificate** — 16-course specialisation
 
 ---
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,45:1F6FEB,100:58A6FF&height=120&section=footer" width="100%" alt="" />
+</p>
