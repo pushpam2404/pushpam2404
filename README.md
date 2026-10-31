@@ -28,7 +28,7 @@ I'm open to data engineering and backend internships.
 **B.Tech in Computer Science and Engineering** · GITAM University, Visakhapatnam · 2024 to 2028
 
 - 📚 **Coursework:** DBMS · Algorithms · Data Structures · Operating Systems · Data Warehousing and Mining · Computer Networks · Machine Learning · Probability and Statistics
-- 📜 **IBM Data Engineering Professional Certificate** on Coursera: 16 courses across Airflow, Kafka, Spark, Hadoop, NoSQL and BI dashboards
+- 📜 **IBM Data Engineering Professional Certificate** on Coursera: 16 courses across Airflow, Kafka, Spark, Hadoop, NoSQL and BI dashboards ([see it on LinkedIn](https://www.linkedin.com/in/pushpamrajsatyarthi/details/certifications/))
 
 <img src="./assets/divider.svg" width="100%" alt="" />
 
@@ -107,7 +107,7 @@ I'm open to data engineering and backend internships.
 ## 🤝 Leadership and Community
 
 - 🏛️ **President, IEEE Computer Society GITAM Vizag** · Sept 2026 to now
-- 🐙 **Open Source Lead, GitHub Community GITAM** · Aug 2026 to now. I run Git and GitHub workshops and walk students through their first pull request
+- 🐙 **Domain Lead, Open Source and Developer Experience (OS/DE), GitHub Community GITAM** · Aug 2026 to now. I run Git and GitHub workshops and walk students through their first pull request
 - ✈️ **Aircraft Domain Lead, AeroGitam Club** · Feb to Nov 2025
 
 <img src="./assets/divider.svg" width="100%" alt="" />
@@ -141,6 +141,15 @@ I'm open to data engineering and backend internships.
 - **Smart India Hackathon 2026:** internal-round qualifier, fake account detection engine (SIH-1775)
 - **Smart India Hackathon 2025:** internal-round qualifier, TripSync
 - **24-hour university hackathon:** KAPS MedTech backend
+
+<img src="./assets/divider.svg" width="100%" alt="" />
+
+## 🎧 Beyond code
+
+- 🧩 **Speed-cubing**
+- 🎶 **Music**, a *lot* of it. I even built a 3D map out of Spotify listening history ([Astra](https://github.com/pushpam2404/astra-3d-music-universe))
+- 📖 **Books**, mostly fiction
+- 🍥 **Anime**, a *lot* of that too
 
 <img src="./assets/divider.svg" width="100%" alt="" />
 
