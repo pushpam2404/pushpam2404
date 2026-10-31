@@ -190,8 +190,8 @@ def build(calendar, username):
 
 
 SNAKE = ["#e8b4b8", "#d99ea4", "#c98791", "#b76e79", "#a05a66"]   # head to tail
-SNAKE_MAX_STEP = 0.08      # seconds per cell, slowed to this at most
-SNAKE_TARGET = 30.0        # seconds the whole meal should take, at most
+SNAKE_MAX_STEP = 0.14      # seconds per cell, slowed to this at most
+SNAKE_TARGET = 50.0        # seconds the whole meal should take, at most
 SNAKE_HOLD = 2.5           # seconds the finished snake rests before the loop restarts
 
 
