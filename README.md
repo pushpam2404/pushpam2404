@@ -16,7 +16,6 @@ I'm a third-year CSE student at **GITAM University in Visakhapatnam** (CGPA 9.17
 - 💼 **Software engineering intern @ Motherson Technology Services** (AIML team). I built the chat-history storage for LegalLens, an AI legal-research platform: a FastAPI module with 9 endpoints, SQLite for metadata and Azure Blob Storage for message payloads.
 - 🎓 IBM Data Engineering Professional Certificate (16 courses)
 - 🛡️ President of **IEEE-CS GITAM Vizag**, and Domain Lead for Open Source and DevX in the **GitHub Community at GITAM Vizag**
-- 🌱 Currently learning Airflow, star-schema design, incremental ETL, and more FastAPI and PostgreSQL
 
 I'm open to data engineering and backend internships.
 
@@ -24,17 +23,54 @@ I'm open to data engineering and backend internships.
 
 ## ⚡ Projects
 
-| Project | What it does | Stack |
-|---|---|---|
-| [**Fake Account and Threat Detection Engine**](https://github.com/pushpam2404/fake_acc) | Two XGBoost classifiers trained on about 101,000 labeled accounts: 90.04% accuracy for X and 96.87% for Meta platforms. Removing a noisy tweet-level dataset lifted X from 67% to 90.04%. SHAP risk factors in plain English, a NetworkX graph for coordinated accounts, PDF case-file export, and Playwright scraping that never stores credentials. Built for SIH-1775 (ITBP / Ministry of Home Affairs) | Python, XGBoost, SHAP, FastAPI, React, NetworkX |
-| [**Global Banking ETL**](https://github.com/pushpam2404/global-finance-etl) | Scrapes market capitalization data for the largest banks, converts currencies with vectorized operations, and loads the result into SQLite and CSV, with timestamped logging at each stage | Python, Pandas, NumPy, BeautifulSoup, SQLite |
-| [**KAPS MedTech**](https://github.com/pushpam2404/KAPS-Medtech) ([live](https://kaps-medtech.vercel.app)) | Clinic app where students book doctors and doctors record diagnoses and prescriptions. Built at a 24-hour university hackathon; the repo has 29 integration checks | Node.js, Express, PostgreSQL, JWT, bcrypt |
-| [**TripSync**](https://github.com/pushpam2404/Trip-Sync) ([live](https://trip-sync-rho.vercel.app)) | Road-trip planner with maps, nearby stops and a chat assistant. Started for Smart India Hackathon 2025, still in development | TypeScript, React, Express, MongoDB, Gemini |
-| [**mealbridge**](https://github.com/pushpam2404/mealbridge) ([live](https://mealbridge-app.vercel.app)) | MERN app that connects kitchens with surplus food to NGOs | MERN |
-| [**astra-3d-music-universe**](https://github.com/pushpam2404/astra-3d-music-universe) ([live](https://astra-3d-music-universe.vercel.app)) | WebGL scene built from Spotify listening history | WebGL |
-| [**sih_149**](https://github.com/pushpam2404/sih_149) | Secure data erasure and file recovery tool with a hash-chained audit log | |
+<table>
+  <thead>
+    <tr>
+      <th align="center">Project</th>
+      <th align="center">What it does</th>
+      <th align="center">Stack</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center" valign="middle"><a href="https://github.com/pushpam2404/fake_acc"><img src="https://img.shields.io/badge/-Fake%20Account%20and%20Threat%20Detection%20Engine-1F6FEB?style=flat-square" alt="Fake Account and Threat Detection Engine" /></a></td>
+      <td align="justify" valign="middle">Two XGBoost classifiers trained on about 101,000 labeled accounts: 90.04% accuracy for X and 96.87% for Meta platforms. Removing a noisy tweet-level dataset lifted X from 67% to 90.04%. SHAP risk factors in plain English, a NetworkX graph for coordinated accounts, PDF case-file export, and Playwright scraping that never stores credentials. Built for SIH-1775 (ITBP / Ministry of Home Affairs).</td>
+      <td align="center" valign="middle">Python, XGBoost, SHAP, FastAPI, React, NetworkX</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><a href="https://github.com/pushpam2404/global-finance-etl"><img src="https://img.shields.io/badge/-Global%20Banking%20ETL-1F6FEB?style=flat-square" alt="Global Banking ETL" /></a></td>
+      <td align="justify" valign="middle">Scrapes market capitalization data for the largest banks, converts currencies with vectorized operations, and loads the result into SQLite and CSV, with timestamped logging at each stage.</td>
+      <td align="center" valign="middle">Python, Pandas, NumPy, BeautifulSoup, SQLite</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><a href="https://github.com/pushpam2404/KAPS-Medtech"><img src="https://img.shields.io/badge/-KAPS%20MedTech-1F6FEB?style=flat-square" alt="KAPS MedTech" /></a><br/><a href="https://kaps-medtech.vercel.app"><img src="https://img.shields.io/badge/-live-388BFD?style=flat-square&logo=vercel&logoColor=white" alt="live" /></a></td>
+      <td align="justify" valign="middle">Clinic app where students book doctors and doctors record diagnoses and prescriptions. Built at a 24-hour university hackathon; the repo has 29 integration checks.</td>
+      <td align="center" valign="middle">Node.js, Express, PostgreSQL, JWT, bcrypt</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><a href="https://github.com/pushpam2404/Trip-Sync"><img src="https://img.shields.io/badge/-TripSync-1F6FEB?style=flat-square" alt="TripSync" /></a><br/><a href="https://trip-sync-rho.vercel.app"><img src="https://img.shields.io/badge/-live-388BFD?style=flat-square&logo=vercel&logoColor=white" alt="live" /></a></td>
+      <td align="justify" valign="middle">Road-trip planner with maps, nearby stops and a chat assistant. Started for Smart India Hackathon 2025, still in development.</td>
+      <td align="center" valign="middle">TypeScript, React, Express, MongoDB, Gemini</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><a href="https://github.com/pushpam2404/mealbridge"><img src="https://img.shields.io/badge/-mealbridge-1F6FEB?style=flat-square" alt="mealbridge" /></a><br/><a href="https://mealbridge-app.vercel.app"><img src="https://img.shields.io/badge/-live-388BFD?style=flat-square&logo=vercel&logoColor=white" alt="live" /></a></td>
+      <td align="justify" valign="middle">MERN app that connects kitchens with surplus food to NGOs.</td>
+      <td align="center" valign="middle">MERN</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><a href="https://github.com/pushpam2404/astra-3d-music-universe"><img src="https://img.shields.io/badge/-astra--3d--music--universe-1F6FEB?style=flat-square" alt="astra-3d-music-universe" /></a><br/><a href="https://astra-3d-music-universe.vercel.app"><img src="https://img.shields.io/badge/-live-388BFD?style=flat-square&logo=vercel&logoColor=white" alt="live" /></a></td>
+      <td align="justify" valign="middle">WebGL scene built from Spotify listening history.</td>
+      <td align="center" valign="middle">WebGL</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><a href="https://github.com/pushpam2404/sih_149"><img src="https://img.shields.io/badge/-sih_149-1F6FEB?style=flat-square" alt="sih_149" /></a></td>
+      <td align="justify" valign="middle">Secure data erasure and file recovery tool with a hash-chained audit log.</td>
+      <td align="center" valign="middle">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
 
-Also: [sluice](https://github.com/pushpam2404/sluice), [terminal-arcade](https://github.com/pushpam2404/terminal-arcade) and [open-source-launchpad](https://github.com/pushpam2404/open-source-launchpad), practice repositories I set up for first-time contributors at GITAM.
+<p align="center">Also, practice repositories I set up for first-time contributors at GITAM:<br/><a href="https://github.com/pushpam2404/sluice"><img src="https://img.shields.io/badge/-sluice-0D419D?style=flat-square" alt="sluice" /></a> <a href="https://github.com/pushpam2404/terminal-arcade"><img src="https://img.shields.io/badge/-terminal--arcade-0D419D?style=flat-square" alt="terminal-arcade" /></a> <a href="https://github.com/pushpam2404/open-source-launchpad"><img src="https://img.shields.io/badge/-open--source--launchpad-0D419D?style=flat-square" alt="open-source-launchpad" /></a></p>
 
 <img src="./assets/divider.svg" width="100%" alt="" />
 

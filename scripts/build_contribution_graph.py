@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the contribution graph as an SVG with a dark background and a pink ramp.
+"""Render the contribution graph as an SVG with a dark background and a blue ramp.
 
 Why this exists rather than a third-party image host: every embeddable
 contribution-graph service either hardcodes a light grey for empty days
@@ -7,7 +7,7 @@ contribution-graph service either hardcodes a light grey for empty days
 Generating it here means the colours are exactly what we want and the graph
 cannot break because somebody else's free Vercel plan ran out.
 
-Colour rule: a day with no contributions is dark, and the pink deepens as the
+Colour rule: a day with no contributions is dark, and the blue deepens as the
 count rises.
 
 Usage:
@@ -26,10 +26,10 @@ import urllib.request
 BACKGROUND = "#0D1117"
 EMPTY = "#161B22"          # a day with zero contributions
 RAMP = [
-    "#FFC2EC",             # 1  - palest pink
-    "#FF7AD4",             # 2
-    "#E91E8C",             # 3
-    "#A1105E",             # 4  - deepest pink
+    "#A5D6FF",             # 1  - palest blue
+    "#58A6FF",             # 2
+    "#1F6FEB",             # 3
+    "#0D419D",             # 4  - deepest blue
 ]
 BORDER = "#21262D"
 TEXT = "#8B949E"
