@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the contribution graph as an SVG with a dark background and a blue ramp.
+"""Render the contribution graph as an SVG with a dark background and a rose ramp.
 
 Why this exists rather than a third-party image host: every embeddable
 contribution-graph service either hardcodes a light grey for empty days
@@ -7,7 +7,7 @@ contribution-graph service either hardcodes a light grey for empty days
 Generating it here means the colours are exactly what we want and the graph
 cannot break because somebody else's free Vercel plan ran out.
 
-Colour rule: a day with no contributions is dark, and the blue deepens as the
+Colour rule: a day with no contributions is dark, and the rose brightens as the
 count rises.
 
 Usage:
@@ -23,16 +23,16 @@ import sys
 import urllib.error
 import urllib.request
 
-BACKGROUND = "#0D1117"
-EMPTY = "#161B22"          # a day with zero contributions
+BACKGROUND = "#0F0809"
+EMPTY = "#1E1417"          # a day with zero contributions
 RAMP = [
-    "#A5D6FF",             # 1  - palest blue
-    "#58A6FF",             # 2
-    "#1F6FEB",             # 3
-    "#0D419D",             # 4  - deepest blue
+    "#7A4350",             # 1  - dimmest rose
+    "#b76e79",             # 2
+    "#e8b4b8",             # 3
+    "#f7e7ce",             # 4  - brightest (champagne)
 ]
-BORDER = "#21262D"
-TEXT = "#8B949E"
+BORDER = "#33171F"
+TEXT = "#a8838a"
 
 CELL = 11                  # square size
 GAP = 3
@@ -126,7 +126,7 @@ def build(calendar, username):
         f'aria-label="{total} contributions by {username} in the last year">',
         "<style>",
         f"  .lbl {{ font: 400 9px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif; fill: {TEXT}; }}",
-        f"  .ttl {{ font: 600 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif; fill: #C9D1D9; }}",
+        f"  .ttl {{ font: 600 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif; fill: #f7e7ce; }}",
         "</style>",
         f'<rect width="{width}" height="{height}" rx="6" fill="{BACKGROUND}" stroke="{BORDER}"/>',
         f'<text x="{PAD_X}" y="20" class="ttl">{total} contributions in the last year</text>',
