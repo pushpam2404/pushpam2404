@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="280" viewBox="0 0 900 280" role="img" aria-label="Pushpam Raj Satyarthi, Data Engineering, Backend Systems, Applied ML">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0D1117"/>
+      <stop offset="0.55" stop-color="#0B1B33"/>
+      <stop offset="1" stop-color="#0F2A57"/>
+    </linearGradient>
+    <linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#A5D6FF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.2" r="0.7">
+      <stop offset="0" stop-color="#1F6FEB" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#1F6FEB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#58A6FF" stroke-opacity="0.09" stroke-width="1"/>
+    </pattern>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+    <clipPath id="clip"><rect width="900" height="280" rx="22"/></clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="900" height="280" fill="url(#bg)"/>
+    <rect width="900" height="280" fill="url(#grid)"/>
+    <rect width="900" height="280" fill="url(#glow)"/>
+
+    <!-- pipeline traces -->
+    <g fill="none" stroke="#58A6FF" stroke-opacity="0.55" stroke-width="1.5" stroke-linejoin="round">
+      <path id="t1" d="M0 238 H70 L92 260 H210"/>
+      <path d="M0 262 H40 L58 244 H150"/>
+      <path d="M420 0 V34 L440 54 H520"/>
+      <path d="M470 280 V236 L490 216 H540"/>
+      <path d="M900 120 H880 L862 138 H830"/>
+    </g>
+    <g fill="#A5D6FF">
+      <circle cx="210" cy="260" r="3.5"/><circle cx="150" cy="244" r="3.5"/>
+      <circle cx="520" cy="54" r="3.5"/><circle cx="540" cy="216" r="3.5"/>
+      <circle cx="830" cy="138" r="3.5"/>
+    </g>
+    <g fill="#58A6FF" filter="url(#blur)" opacity="0.9">
+      <circle cx="210" cy="260" r="5"/><circle cx="520" cy="54" r="5"/><circle cx="830" cy="138" r="5"/>
+    </g>
+    <!-- a record travelling down the pipeline -->
+    <circle r="3" fill="#ffffff">
+      <animateMotion dur="3.5s" repeatCount="indefinite"><mpath href="#t1"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- left: intro -->
+    <text x="56" y="62" font-family="'SF Mono','Fira Code',Menlo,Consolas,monospace" font-size="15" fill="#58A6FF">~/pushpam <tspan fill="#7EE787">$</tspan> whoami<tspan fill="#A5D6FF">_<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/></tspan></text>
+    <text x="54" y="118" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="42" font-weight="700" fill="url(#name)" letter-spacing="0.5">Pushpam Raj Satyarthi</text>
+    <text x="56" y="162" font-family="'SF Mono','Fira Code',Menlo,Consolas,monospace" font-size="17" fill="#A5D6FF">Data Engineering · Backend · Applied ML</text>
+    <rect x="56" y="196" width="156" height="30" rx="15" fill="#1F6FEB" fill-opacity="0.14" stroke="#58A6FF" stroke-opacity="0.6"/>
+    <text x="134" y="216" text-anchor="middle" font-family="'SF Mono','Fira Code',Menlo,Consolas,monospace" font-size="13" fill="#C9E4FF">B.Tech CSE · GITAM</text>
+    <rect x="224" y="196" width="176" height="30" rx="15" fill="#1F6FEB" fill-opacity="0.14" stroke="#58A6FF" stroke-opacity="0.6"/>
+    <text x="312" y="216" text-anchor="middle" font-family="'SF Mono','Fira Code',Menlo,Consolas,monospace" font-size="13" fill="#C9E4FF">Visakhapatnam, IN</text>
+
+    <!-- right: code window -->
+    <rect x="566" y="52" width="296" height="176" rx="12" fill="#0A0F1A" fill-opacity="0.9" stroke="#1F4C9A" stroke-width="1.2"/>
+    <path d="M566 64a12 12 0 0 1 12-12h272a12 12 0 0 1 12 12v18H566z" fill="#10213F"/>
+    <circle cx="586" cy="67" r="4.5" fill="#1F6FEB"/><circle cx="603" cy="67" r="4.5" fill="#58A6FF"/><circle cx="620" cy="67" r="4.5" fill="#A5D6FF"/>
+    <g font-family="'SF Mono','Fira Code',Menlo,Consolas,monospace" font-size="13.5">
+      <text x="584" y="108" fill="#58A6FF">const <tspan fill="#E6EDF3">dev</tspan> <tspan fill="#7EE787">=</tspan> {</text>
+      <text x="602" y="130" fill="#8B949E">name<tspan fill="#7EE787">:</tspan> <tspan fill="#A5D6FF">"Pushpam"</tspan>,</text>
+      <text x="602" y="152" fill="#8B949E">stack<tspan fill="#7EE787">:</tspan> <tspan fill="#A5D6FF">["Py","SQL","API"]</tspan>,</text>
+      <text x="602" y="174" fill="#8B949E">focus<tspan fill="#7EE787">:</tspan> <tspan fill="#A5D6FF">"pipelines"</tspan>,</text>
+      <text x="602" y="196" fill="#8B949E">open<tspan fill="#7EE787">:</tspan> <tspan fill="#A5D6FF">"internships"</tspan></text>
+      <text x="584" y="218" fill="#58A6FF">};</text>
+    </g>
+  </g>
+  <rect x="0.75" y="0.75" width="898.5" height="278.5" rx="21.5" fill="none" stroke="#58A6FF" stroke-opacity="0.35"/>
+</svg>
