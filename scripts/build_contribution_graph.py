@@ -190,65 +190,139 @@ def build(calendar, username):
 
 
 SNAKE = ["#e8b4b8", "#d99ea4", "#c98791", "#b76e79", "#a05a66"]   # head to tail
-SNAKE_STEP = 0.04          # seconds per cell
+SNAKE_MAX_STEP = 0.05      # seconds per cell, slowed to this at most
+SNAKE_TARGET = 22.0        # seconds the whole meal should take, at most
 SNAKE_HOLD = 2.5           # seconds the finished snake rests before the loop restarts
 
 
+def snake_route(cells, dots):
+    """Cells the head visits, in order.
+
+    The snake eats the smallest contributions first and works up to the
+    largest, always heading for the nearest dot of the level it is on. It only
+    ever steps on cells of the grid, never onto its own body, and goes around
+    bigger dots that are still waiting unless there is no other way.
+    """
+    length = len(SNAKE)
+    start = min(cells)                                  # top-left cell
+    history = [start] * length                          # head is history[-1]
+    remaining = dict(dots)                              # cell -> level
+    steps = 0
+
+    def neighbours(c):
+        wi, row = c
+        for d in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            n = (wi + d[0], row + d[1])
+            if n in cells:
+                yield n
+
+    def search(goals, avoid_bigger, avoid_body):
+        """Shortest walk from the head to the nearest goal, or None."""
+        head = history[-1]
+        came = {head: None}
+        queue = [head]
+        for cur in queue:
+            dist = 0
+            node = cur
+            while came[node] is not None:
+                node = came[node]
+                dist += 1
+            for n in neighbours(cur):
+                if n in came:
+                    continue
+                if avoid_body and n in history[len(history) - (length - dist - 1):]:
+                    continue
+                if avoid_bigger and remaining.get(n, 0) > level_now[0]:
+                    continue
+                came[n] = cur
+                if n in goals:
+                    walk = [n]
+                    while came[walk[-1]] is not head:
+                        walk.append(came[walk[-1]])
+                    return walk[::-1]
+                queue.append(n)
+        return None
+
+    level_now = [0]
+    route = [start]
+    first_visit = {}
+    for lv in range(1, len(RAMP) + 1):
+        level_now[0] = lv
+        goals = {c for c, v in remaining.items() if v == lv}
+        while goals:
+            walk = (search(goals, True, True) or search(goals, False, True)
+                    or search(goals, False, False))
+            if walk is None:                            # unreachable: leave it
+                break
+            for c in walk:
+                history.append(c)
+                route.append(c)
+                if c in remaining and c not in first_visit:
+                    first_visit[c] = len(route) - 1
+                    del remaining[c]
+                    goals.discard(c)
+    return route, first_visit
+
+
 def build_snake(calendar):
-    """A snake that zig-zags down one week, up the next, eating every
-    contribution on the way. It never leaves the grid."""
+    """A snake that eats every contribution, smallest first, without ever
+    leaving the grid."""
     weeks = calendar["weeks"]
     thresholds = ramp_thresholds(weeks)
     pitch = CELL + GAP
     width = PAD_X * 2 + len(weeks) * pitch - GAP
     height = 30 + 7 * pitch - GAP
 
-    def centre(wi, row):
-        return PAD_X + wi * pitch + CELL / 2, 15 + row * pitch + CELL / 2
+    def centre(c):
+        return PAD_X + c[0] * pitch + CELL / 2, 15 + c[1] * pitch + CELL / 2
 
-    # Walk order: week 0 top to bottom, week 1 bottom to top, and so on.
-    path = []
-    for wi in range(len(weeks)):
-        for row in (range(7) if wi % 2 == 0 else range(6, -1, -1)):
-            path.append((wi, row))
-    index = {cell: i for i, cell in enumerate(path)}
-    total = (len(path) - 1 + len(SNAKE)) * SNAKE_STEP + SNAKE_HOLD
+    cells, dots = set(), {}
+    for wi, week in enumerate(weeks):
+        for day in week["contributionDays"]:
+            cells.add((wi, day["weekday"]))
+            lv = level(day["contributionCount"], thresholds)
+            if lv:
+                dots[(wi, day["weekday"])] = lv
+
+    route, eaten_at = snake_route(cells, dots)
+    step = min(SNAKE_MAX_STEP, SNAKE_TARGET / max(1, len(route)))
+    total = (len(route) - 1 + len(SNAKE)) * step + SNAKE_HOLD
 
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
         f'viewBox="0 0 {width} {height}" role="img" aria-label="A snake eating the contribution graph">',
         f'<rect width="{width}" height="{height}" rx="6" fill="{BACKGROUND}" stroke="{BORDER}"/>',
-        "<defs><path id=\"walk\" d=\"" + " ".join(
-            f"{'M' if i == 0 else 'L'}{centre(*c)[0]:g} {centre(*c)[1]:g}" for i, c in enumerate(path)
-        ) + "\"/></defs>",
+        '<defs><path id="walk" d="' + " ".join(
+            f"{'M' if i == 0 else 'L'}{centre(c)[0]:g} {centre(c)[1]:g}" for i, c in enumerate(route)
+        ) + '"/></defs>',
     ]
 
-    for wi, week in enumerate(weeks):
-        for day in week["contributionDays"]:
-            lv = level(day["contributionCount"], thresholds)
-            x = PAD_X + wi * pitch
-            y = 15 + day["weekday"] * pitch
-            rect = f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="{RADIUS}"'
-            if lv == 0:
-                out.append(f'{rect} fill="{EMPTY}"/>')
-                continue
-            eaten = index[(wi, day["weekday"])] * SNAKE_STEP / total
+    for (wi, row) in sorted(cells):
+        x, y = PAD_X + wi * pitch, 15 + row * pitch
+        rect = f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="{RADIUS}"'
+        lv = dots.get((wi, row))
+        if not lv:
+            out.append(f'{rect} fill="{EMPTY}"/>')
+        elif (wi, row) not in eaten_at:
+            out.append(f'{rect} fill="{RAMP[lv - 1]}"/>')
+        else:
+            at = eaten_at[(wi, row)] * step / total
             out.append(
                 f'{rect} fill="{RAMP[lv - 1]}"><animate attributeName="fill" dur="{total:.2f}s" '
-                f'repeatCount="indefinite" calcMode="discrete" keyTimes="0;{eaten:.4f};1" '
+                f'repeatCount="indefinite" calcMode="discrete" keyTimes="0;{at:.4f};1" '
                 f'values="{RAMP[lv - 1]};{EMPTY};{EMPTY}"/></rect>'
             )
 
-    # Each segment walks the same path, a little later than the one in front.
+    # Each segment walks the same route, a little later than the one in front.
     for k, colour in reversed(list(enumerate(SNAKE))):
         size = CELL - k
-        start = k * SNAKE_STEP / total
-        end = (k + len(path) - 1) * SNAKE_STEP / total
+        begin = k * step / total
+        end = (k + len(route) - 1) * step / total
         out.append(
             f'<rect x="{-size / 2:g}" y="{-size / 2:g}" width="{size}" height="{size}" rx="{RADIUS}" '
             f'fill="{colour}" stroke="{BACKGROUND}" stroke-width="1">'
             f'<animateMotion dur="{total:.2f}s" repeatCount="indefinite" calcMode="linear" '
-            f'keyPoints="0;0;1;1" keyTimes="0;{start:.4f};{end:.4f};1"><mpath href="#walk"/></animateMotion></rect>'
+            f'keyPoints="0;0;1;1" keyTimes="0;{begin:.4f};{end:.4f};1"><mpath href="#walk"/></animateMotion></rect>'
         )
     out.append("</svg>")
     return "\n".join(out)

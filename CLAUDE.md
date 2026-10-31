@@ -21,7 +21,7 @@ All arguments are optional and default to `pushpam2404`, `contributions.svg` and
 Two generated images are embedded in `README.md` under "Activity", both produced by `scripts/build_contribution_graph.py` and committed to `main`:
 
 - **`contributions.svg`** is the contribution graph (dark background, rose ramp). It is self-hosted deliberately: third-party graph hosts hardcode a light grey for empty days or are out of quota.
-- **`snake.svg`** is a snake animation (SMIL, no JS) drawn by `build_snake()`. It zig-zags week by week and eats each contribution, and it never leaves the grid. The `Platane/snk` action was dropped because its snake roams outside the grid and that cannot be configured.
+- **`snake.svg`** is a snake animation (SMIL, no JS) drawn by `build_snake()`. `snake_route()` plans it: the snake eats the smallest contributions first, heads for the nearest dot of its current level, and never leaves the grid or steps on its own body. The `Platane/snk` action was dropped because its snake roams outside the grid and that cannot be configured.
 
 `.github/workflows/contribution-graph.yml` rebuilds both daily at 01:30 UTC and on pushes to `main` that touch the script or the workflow file. It commits only when either file changed, with the message `chore: refresh contribution graph [skip ci]`. That is where the bot commits in `git log` come from. The old `output` branch from the `snk` workflow is no longer used.
 
