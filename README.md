@@ -160,15 +160,14 @@ I'm open to data engineering and backend internships.
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/pushpam2404/pushpam2404/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Snake animation eating the contribution graph" />
+  <img src="./snake.svg" width="100%" alt="Snake animation eating the contribution graph" />
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/github/followers/pushpam2404?style=for-the-badge&color=b76e79&labelColor=8E5560&logo=github&logoColor=white" alt="followers" />
-  <img src="https://komarev.com/ghpvc/?username=pushpam2404&style=for-the-badge&color=b76e79&label=profile+views" alt="profile views" />
 </p>
 
-<sub>The contribution graph and the snake are regenerated daily by the workflows in `.github/workflows`.</sub>
+<sub>The contribution graph and the snake are regenerated daily by the workflow in `.github/workflows`.</sub>
 
 <img src="./assets/divider.svg" width="100%" alt="" />
 

@@ -1,4 +1,4 @@
-# Regenerate contributions.svg so the graph on the profile stays current.
+# Regenerate contributions.svg and snake.svg so the graph and snake on the profile stay current.
 #
 # The graph is committed to this repository rather than loaded from a
 # third-party image host, because every such host either hardcodes a light grey
@@ -40,16 +40,16 @@ jobs:
           # The default GITHUB_TOKEN can read the contributions calendar for the
           # user who owns this repository, which is all this needs.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/build_contribution_graph.py "${{ github.repository_owner }}" contributions.svg
+        run: python3 scripts/build_contribution_graph.py "${{ github.repository_owner }}" contributions.svg snake.svg
 
       - name: Commit only if something changed
         run: |
-          if git diff --quiet -- contributions.svg; then
+          if git diff --quiet -- contributions.svg snake.svg; then
             echo "No change in the last day — nothing to commit."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add contributions.svg
+          git add contributions.svg snake.svg
           git commit -m "chore: refresh contribution graph [skip ci]"
           git push

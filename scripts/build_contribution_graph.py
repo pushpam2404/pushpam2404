@@ -10,8 +10,12 @@ cannot break because somebody else's free Vercel plan ran out.
 Colour rule: a day with no contributions is dark, and the rose brightens as the
 count rises.
 
+The same run also writes a snake animation. It is drawn here rather than with
+a third-party action because those let the snake wander outside the grid; this
+one sweeps column by column and stays inside it.
+
 Usage:
-    python3 scripts/build_contribution_graph.py <github-username> <output.svg>
+    python3 scripts/build_contribution_graph.py <github-username> <graph.svg> <snake.svg>
 
 Needs a token in GITHUB_TOKEN or GH_TOKEN (the contributions calendar is only
 available through the GraphQL API, which requires authentication).
@@ -102,20 +106,23 @@ def level(count, thresholds):
     return len(RAMP)
 
 
+def ramp_thresholds(weeks):
+    """Scale the ramp to this person's actual activity, so the graph stays
+    readable whether their busiest day is 3 commits or 300."""
+    counts = sorted(d["contributionCount"]
+                    for w in weeks for d in w["contributionDays"]
+                    if d["contributionCount"] > 0)
+    if not counts:
+        return [1, 2, 3]
+    q = [counts[min(len(counts) - 1, int(len(counts) * f))] for f in (0.25, 0.5, 0.75)]
+    return [max(1, q[0]), max(2, q[1]), max(3, q[2])]
+
+
 def build(calendar, username):
     weeks = calendar["weeks"]
     total = calendar["totalContributions"]
 
-    # Scale the ramp to this person's actual activity, so the graph stays
-    # readable whether their busiest day is 3 commits or 300.
-    counts = sorted(d["contributionCount"]
-                    for w in weeks for d in w["contributionDays"]
-                    if d["contributionCount"] > 0)
-    if counts:
-        q = [counts[min(len(counts) - 1, int(len(counts) * f))] for f in (0.25, 0.5, 0.75)]
-        thresholds = [max(1, q[0]), max(2, q[1]), max(3, q[2])]
-    else:
-        thresholds = [1, 2, 3]
+    thresholds = ramp_thresholds(weeks)
 
     width = PAD_X * 2 + LABEL_W + len(weeks) * (CELL + GAP)
     height = PAD_TOP + 7 * (CELL + GAP) + PAD_BOTTOM
@@ -182,9 +189,75 @@ def build(calendar, username):
     return "\n".join(out), total, thresholds
 
 
+SNAKE = ["#e8b4b8", "#d99ea4", "#c98791", "#b76e79", "#a05a66"]   # head to tail
+SNAKE_STEP = 0.04          # seconds per cell
+SNAKE_HOLD = 2.5           # seconds the finished snake rests before the loop restarts
+
+
+def build_snake(calendar):
+    """A snake that zig-zags down one week, up the next, eating every
+    contribution on the way. It never leaves the grid."""
+    weeks = calendar["weeks"]
+    thresholds = ramp_thresholds(weeks)
+    pitch = CELL + GAP
+    width = PAD_X * 2 + len(weeks) * pitch - GAP
+    height = 30 + 7 * pitch - GAP
+
+    def centre(wi, row):
+        return PAD_X + wi * pitch + CELL / 2, 15 + row * pitch + CELL / 2
+
+    # Walk order: week 0 top to bottom, week 1 bottom to top, and so on.
+    path = []
+    for wi in range(len(weeks)):
+        for row in (range(7) if wi % 2 == 0 else range(6, -1, -1)):
+            path.append((wi, row))
+    index = {cell: i for i, cell in enumerate(path)}
+    total = (len(path) - 1 + len(SNAKE)) * SNAKE_STEP + SNAKE_HOLD
+
+    out = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
+        f'viewBox="0 0 {width} {height}" role="img" aria-label="A snake eating the contribution graph">',
+        f'<rect width="{width}" height="{height}" rx="6" fill="{BACKGROUND}" stroke="{BORDER}"/>',
+        "<defs><path id=\"walk\" d=\"" + " ".join(
+            f"{'M' if i == 0 else 'L'}{centre(*c)[0]:g} {centre(*c)[1]:g}" for i, c in enumerate(path)
+        ) + "\"/></defs>",
+    ]
+
+    for wi, week in enumerate(weeks):
+        for day in week["contributionDays"]:
+            lv = level(day["contributionCount"], thresholds)
+            x = PAD_X + wi * pitch
+            y = 15 + day["weekday"] * pitch
+            rect = f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="{RADIUS}"'
+            if lv == 0:
+                out.append(f'{rect} fill="{EMPTY}"/>')
+                continue
+            eaten = index[(wi, day["weekday"])] * SNAKE_STEP / total
+            out.append(
+                f'{rect} fill="{RAMP[lv - 1]}"><animate attributeName="fill" dur="{total:.2f}s" '
+                f'repeatCount="indefinite" calcMode="discrete" keyTimes="0;{eaten:.4f};1" '
+                f'values="{RAMP[lv - 1]};{EMPTY};{EMPTY}"/></rect>'
+            )
+
+    # Each segment walks the same path, a little later than the one in front.
+    for k, colour in reversed(list(enumerate(SNAKE))):
+        size = CELL - k
+        start = k * SNAKE_STEP / total
+        end = (k + len(path) - 1) * SNAKE_STEP / total
+        out.append(
+            f'<rect x="{-size / 2:g}" y="{-size / 2:g}" width="{size}" height="{size}" rx="{RADIUS}" '
+            f'fill="{colour}" stroke="{BACKGROUND}" stroke-width="1">'
+            f'<animateMotion dur="{total:.2f}s" repeatCount="indefinite" calcMode="linear" '
+            f'keyPoints="0;0;1;1" keyTimes="0;{start:.4f};{end:.4f};1"><mpath href="#walk"/></animateMotion></rect>'
+        )
+    out.append("</svg>")
+    return "\n".join(out)
+
+
 def main():
     username = sys.argv[1] if len(sys.argv) > 1 else "pushpam2404"
     target = sys.argv[2] if len(sys.argv) > 2 else "contributions.svg"
+    snake_target = sys.argv[3] if len(sys.argv) > 3 else "snake.svg"
 
     calendar = fetch(username)
     svg, total, thresholds = build(calendar, username)
@@ -192,7 +265,10 @@ def main():
     with open(target, "w", encoding="utf-8") as fh:
         fh.write(svg)
 
-    print(f"wrote {target}")
+    with open(snake_target, "w", encoding="utf-8") as fh:
+        fh.write(build_snake(calendar))
+
+    print(f"wrote {target} and {snake_target}")
     print(f"  contributions: {total}")
     print(f"  ramp thresholds (<=): {thresholds}")
     print(f"  empty colour: {EMPTY}  ramp: {' -> '.join(RAMP)}")
