@@ -190,9 +190,8 @@ def build(calendar, username):
 
 
 SNAKE = ["#e8b4b8", "#d99ea4", "#c98791", "#b76e79", "#a05a66"]   # head to tail
-SNAKE_MAX_STEP = 0.14      # seconds per cell, slowed to this at most
-SNAKE_TARGET = 50.0        # seconds the whole meal should take, at most
-SNAKE_HOLD = 2.5           # seconds the finished snake rests before the loop restarts
+SNAKE_LOOP = 60.0          # seconds for one full loop, however many dots there are
+SNAKE_HOLD = 2.5           # seconds of that the finished snake rests before the loop restarts
 
 
 def snake_route(cells, dots):
@@ -285,8 +284,8 @@ def build_snake(calendar):
                 dots[(wi, day["weekday"])] = lv
 
     route, eaten_at = snake_route(cells, dots)
-    step = min(SNAKE_MAX_STEP, SNAKE_TARGET / max(1, len(route)))
-    total = (len(route) - 1 + len(SNAKE)) * step + SNAKE_HOLD
+    total = SNAKE_LOOP
+    step = (total - SNAKE_HOLD) / (len(route) - 1 + len(SNAKE))
 
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
