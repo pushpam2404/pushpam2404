@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="902" height="112" viewBox="0 0 902 112" role="img" aria-label="Key numbers: 9.17 CGPA, 101K+ accounts, 16 IBM courses, 3 hackathons">
+<defs><linearGradient id="n" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f7e7ce"/><stop offset="1" stop-color="#e8b4b8"/></linearGradient></defs>
+<rect x="2" y="2" width="205" height="108" rx="16" fill="#b76e79" fill-opacity="0.12" stroke="#e8b4b8" stroke-opacity="0.5" stroke-width="1.5"/>
+<text x="104.5" y="55" text-anchor="middle" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="38" font-weight="700" fill="url(#n)">9.17</text>
+<text x="104.5" y="78" text-anchor="middle" font-family="'SF Mono','Fira Code',Menlo,Consolas,monospace" font-size="14" fill="#f7e7ce">CGPA</text>
+<text x="104.5" y="96" text-anchor="middle" font-family="'SF Mono','Fira Code',Menlo,Consolas,monospace" font-size="10.5" fill="#a8838a">GITAM, 3rd year</text>
+<rect x="233" y="2" width="205" height="108" rx="16" fill="#b76e79" fill-opacity="0.12" stroke="#e8b4b8" stroke-opacity="0.5" stroke-width="1.5"/>
+<text x="335.5" y="55" text-anchor="middle" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="38" font-weight="700" fill="url(#n)">101K+</text>
+<text x="335.5" y="78" text-anchor="middle" font-family="'SF Mono','Fira Code',Menlo,Consolas,monospace" font-size="14" fill="#f7e7ce">labeled accounts</text>
+<text x="335.5" y="96" text-anchor="middle" font-family="'SF Mono','Fira Code',Menlo,Consolas,monospace" font-size="10.5" fill="#a8838a">trained the SIH-1775 model</text>
+<rect x="464" y="2" width="205" height="108" rx="16" fill="#b76e79" fill-opacity="0.12" stroke="#e8b4b8" stroke-opacity="0.5" stroke-width="1.5"/>
+<text x="566.5" y="55" text-anchor="middle" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="38" font-weight="700" fill="url(#n)">16</text>
+<text x="566.5" y="78" text-anchor="middle" font-family="'SF Mono','Fira Code',Menlo,Consolas,monospace" font-size="14" fill="#f7e7ce">courses</text>
+<text x="566.5" y="96" text-anchor="middle" font-family="'SF Mono','Fira Code',Menlo,Consolas,monospace" font-size="10.5" fill="#a8838a">IBM Data Eng. cert</text>
+<rect x="695" y="2" width="205" height="108" rx="16" fill="#b76e79" fill-opacity="0.12" stroke="#e8b4b8" stroke-opacity="0.5" stroke-width="1.5"/>
+<text x="797.5" y="55" text-anchor="middle" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="38" font-weight="700" fill="url(#n)">3</text>
+<text x="797.5" y="78" text-anchor="middle" font-family="'SF Mono','Fira Code',Menlo,Consolas,monospace" font-size="14" fill="#f7e7ce">hackathons</text>
+<text x="797.5" y="96" text-anchor="middle" font-family="'SF Mono','Fira Code',Menlo,Consolas,monospace" font-size="10.5" fill="#a8838a">2 SIH rounds + a 24h build</text>
+</svg>

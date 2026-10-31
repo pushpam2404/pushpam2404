@@ -14,11 +14,30 @@
 I'm a third-year CSE student at **GITAM University in Visakhapatnam** (CGPA 9.17), interested in data engineering and backend work. I would rather build a pipeline that copes with bad input than tune a model for another half a point of accuracy.
 
 - 💼 **Software engineering intern @ Motherson Technology Services** (AIML team). I built the chat-history storage for LegalLens, an AI legal-research platform: a FastAPI module with 9 endpoints, SQLite for metadata and Azure Blob Storage for message payloads.
-- 🎓 IBM Data Engineering Professional Certificate (16 courses)
-- 🛡️ President of **IEEE-CS GITAM Vizag**, and Domain Lead for Open Source and DevX in the **GitHub Community at GITAM Vizag**
 
 I'm open to data engineering and backend internships.
 
+<p align="center">
+  <img src="./assets/stats.svg" width="100%" alt="9.17 CGPA, 101K+ labeled accounts, 16 IBM courses, 3 hackathons" />
+</p>
+
+<img src="./assets/divider.svg" width="100%" alt="" />
+
+## 🎓 Education
+
+**B.Tech in Computer Science and Engineering** · GITAM University, Visakhapatnam · 2024 to 2028
+
+- 📚 **Coursework:** DBMS · Algorithms · Data Structures · Operating Systems · Data Warehousing and Mining · Computer Networks · Machine Learning · Probability and Statistics
+- 📜 **IBM Data Engineering Professional Certificate** on Coursera: 16 courses across Airflow, Kafka, Spark, Hadoop, NoSQL and BI dashboards
+
+<img src="./assets/divider.svg" width="100%" alt="" />
+
+## 🧭 How I like to build
+
+- 🔧 Started with **C and C++**, and I still care about memory and efficiency
+- 🧱 Drawn to **backends and data systems**: APIs, ETL, schemas and anything that has to keep working when the input is messy
+- 🚀 I like owning a thing **end to end**, from the database to the UI, and shipping it live
+- 🔍 Fond of **explainable** results: SHAP reasons, audit logs and tests that say what broke
 <img src="./assets/divider.svg" width="100%" alt="" />
 
 ## ⚡ Projects
@@ -70,7 +89,26 @@ I'm open to data engineering and backend internships.
   </tbody>
 </table>
 
+<details>
+<summary><b>🧪 Smaller builds</b></summary>
+
+- ⚙️ **Autocomplete engine** in C, built on a Trie and a min-heap
+- 🛣️ **TollFlow**, an Airflow ETL pipeline
+- 🏛️ **Star-schema warehouse** in PostgreSQL
+- 🧬 **Entity resolution** with ML, for ML Challenge 2026
+- 🛰️ **LiDAR elevation mapping** (C++ and Python), a Smart India Hackathon project
+
+</details>
+
 <p align="center">Also, practice repositories I set up for first-time contributors at GITAM:<br/><a href="https://github.com/pushpam2404/sluice"><img src="./assets/pill-sluice.svg" alt="sluice" /></a> <a href="https://github.com/pushpam2404/terminal-arcade"><img src="./assets/pill-terminal-arcade.svg" alt="terminal-arcade" /></a> <a href="https://github.com/pushpam2404/open-source-launchpad"><img src="./assets/pill-launchpad.svg" alt="open-source-launchpad" /></a></p>
+
+<img src="./assets/divider.svg" width="100%" alt="" />
+
+## 🤝 Leadership and Community
+
+- 🏛️ **President, IEEE Computer Society GITAM Vizag** · Sept 2026 to now
+- 🐙 **Open Source Lead, GitHub Community GITAM** · Aug 2026 to now. I run Git and GitHub workshops and walk students through their first pull request
+- ✈️ **Aircraft Domain Lead, AeroGitam Club** · Feb to Nov 2025
 
 <img src="./assets/divider.svg" width="100%" alt="" />
 
@@ -122,3 +160,13 @@ I'm open to data engineering and backend internships.
 </p>
 
 <sub>The contribution graph and the snake are regenerated daily by the workflows in `.github/workflows`.</sub>
+
+<img src="./assets/divider.svg" width="100%" alt="" />
+
+<p align="center"><i>I like building things.</i></p>
+
+<p align="center">
+  📫 <a href="mailto:prsatyarthi2404@gmail.com">prsatyarthi2404@gmail.com</a> ·
+  <a href="https://linkedin.com/in/pushpamrajsatyarthi">LinkedIn</a> ·
+  <a href="https://pushpam2404-profile.vercel.app">Portfolio</a>
+</p>
