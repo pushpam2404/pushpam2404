@@ -77,7 +77,7 @@ I'm open to data engineering and backend internships.
       <td align="center" valign="middle">MERN</td>
     </tr>
     <tr>
-      <td align="center" valign="middle" width="280"><a href="https://github.com/pushpam2404/astra-3d-music-universe"><img src="./assets/pill-astra.svg" alt="astra-3d-music-universe" /></a><br/><a href="https://astra-3d-music-universe.vercel.app"><img src="./assets/pill-live.svg" alt="live" /></a></td>
+      <td align="center" valign="middle" width="280"><a href="https://github.com/pushpam2404/orbitune"><img src="./assets/pill-orbitune.svg" alt="orbitune" /></a><br/><a href="https://orbitune-music.vercel.app"><img src="./assets/pill-live.svg" alt="live" /></a></td>
       <td align="justify" valign="middle">WebGL scene built from Spotify listening history.</td>
       <td align="center" valign="middle">WebGL</td>
     </tr>
@@ -147,7 +147,7 @@ I'm open to data engineering and backend internships.
 ## 🎧 Beyond code
 
 - 🧩 **Speed-cubing**
-- 🎶 **Music**, a *lot* of it. I even built a 3D map out of Spotify listening history ([Astra](https://github.com/pushpam2404/astra-3d-music-universe))
+- 🎶 **Music**, a *lot* of it. I even built a 3D map out of Spotify listening history ([Orbitune](https://github.com/pushpam2404/orbitune))
 - 📖 **Books**, mostly fiction
 - 🍥 **Anime**, a *lot* of that too
 
